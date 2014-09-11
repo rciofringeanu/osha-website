@@ -292,12 +292,12 @@ $options['init-modules'] = array(
   'languagefield',
   'image_field_caption',
 
-  #'search_api',
-  #'facetapi',
-  #'search_api_facetapi',
-  #'apachesolr',
-  #'apachesolr_search',
-  #'search_api_solr',
+  'search_api',
+  'facetapi',
+  'search_api_facetapi',
+  'apachesolr',
+  'apachesolr_search',
+  //'search_api_solr',
 
   'tmgmt',
   'tmgmt_local',
