@@ -298,6 +298,8 @@ $options['init-modules'] = array(
   'apachesolr',
   'apachesolr_search',
   'apachesolr_autocomplete',
+  'search_autocomplete',
+  'apachesolr_views',
   //'search_api_solr',
 
   'tmgmt',
