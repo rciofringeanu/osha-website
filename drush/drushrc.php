@@ -297,6 +297,7 @@ $options['init-modules'] = array(
   'search_api_facetapi',
   'apachesolr',
   'apachesolr_search',
+  'apachesolr_autocomplete',
   //'search_api_solr',
 
   'tmgmt',
