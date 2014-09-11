@@ -1,0 +1,16 @@
+name = osha_search
+description = Search configuration and customisations
+core = 7.x
+package = OSHA
+version = 7.x-0.1
+project = osha_search
+dependencies[] = apachesolr_autocomplete
+dependencies[] = apachesolr_search
+dependencies[] = ctools
+dependencies[] = search_api
+dependencies[] = search_api_facetapi
+dependencies[] = strongarm
+features[apachesolr_search_page][] = search_wiki
+features[ctools][] = apachesolr_search:apachesolr_search_defaults:3
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
