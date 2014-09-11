@@ -226,7 +226,7 @@ function rules_fetch_data($hook) {
       }
     }
     // Support class discovery.
-    if (isset($discover[$hook])) {
+    if (isset($discover[$hook]) && isset($data[$hook])) {
       $data[$hook] += rules_discover_plugins($discover[$hook]);
     }
     drupal_alter('rules_'. $hook, $data[$hook]);
