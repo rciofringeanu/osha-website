@@ -349,6 +349,7 @@ $options['init-modules'] = array(
   'osha_menu',
   'osha_content',
 
+  'osha_search',
   // Enable last (conflict with rules)
   'uuid',
 
