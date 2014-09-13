@@ -1,0 +1,16 @@
+diff --git a/apachesolr_search.module b/apachesolr_search.module
+index a94c0a9..a9c62e0 100644
+--- a/apachesolr_search.module
++++ b/apachesolr_search.module
+@@ -184,10 +184,7 @@ function apachesolr_search_menu_alter(&$items) {
+     $keys_pos = count($parts);
+     // Tests whether apachesolr_search is the only enabled search module (in
+     // which case there are no tabs).
+-    $active_module_info = search_get_info();
+-    $no_tabs = (sizeof($active_module_info) == 1 && isset($active_module_info['apachesolr_search']));
+-    // Tests whether we are simulating a core search tab.
+-    $core_search = ($parts[0] == 'search' && !$no_tabs);
++    $core_search = $parts[0] == 'search';
+     $position = array_search('%', $parts);
+     $page_title = isset($search_page['page_title']) ? $search_page['page_title'] : 'Search Results';
+ 

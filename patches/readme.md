@@ -7,6 +7,11 @@ When patching a contrib module, the following steps should be followed:
 
 List of patches (most recent first)
 
+* apachesolr
+  * Fix bug that does not show multiple Solr search pages
+  * [[https://www.drupal.org/node/2333447](https://www.drupal.org/files/issues/2333447_apachesolr_no_tabs.patch)
+  * apachesolr/2333447_apachesolr_no_tabs.patch
+
 * entity_collection
   * Fix bug when saving different entities with same eid (overwrites one another)
   * entity_collection/entity_collection-entities-with-same-eid.patch
