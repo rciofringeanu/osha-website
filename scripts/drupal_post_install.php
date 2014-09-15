@@ -102,6 +102,30 @@ function osha_configure_solr() {
     // @todo: See ticket #2527 - cannot make the form save new settings!
     // drupal_form_submit('apachesolr_environment_edit_form', $form_state,
     // $environment);
+
+    // Mark all entities for search indexing - admin/config/search/apachesolr
+    $env_id = 'solr';
+    $form_state = array(
+      'values' => array(
+        'env_id' => $env_id,
+        'entities' => array(
+          'node' => array(
+            'article',
+            'page',
+            'blog',
+            'calls',
+            'highlight',
+            'job_vacancies',
+            'news',
+            'newsletter_article',
+            'press_release',
+            'publication',
+            'wiki_page',
+          ),
+        ),
+      ),
+    );
+    drupal_form_submit('apachesolr_index_config_form', $form_state, $env_id);
   }
 }
 
