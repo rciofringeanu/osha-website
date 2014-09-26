@@ -348,6 +348,9 @@ $options['init-modules'] = array(
   'workbench_access',
   'workbench_moderation',
 
+
+
+
   'osha_taxonomies',
 //  'osha_taxonomies_uuid',
   'osha',
@@ -367,6 +370,10 @@ $options['init-modules'] = array(
   'facetapi',
   'search_api_facetapi',
   'search_autocomplete',
+  'search_api_solr',
+  'search_api_et',
+  'search_api_et_solr',
+  'search_api_views',
   'osha_search',
 
   // Newsletter modules.
