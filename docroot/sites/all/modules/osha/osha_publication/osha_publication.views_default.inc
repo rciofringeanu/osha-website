@@ -62,7 +62,7 @@ function osha_publication_views_default_views() {
   $handler->display->display_options['fields']['field_publication_type']['label'] = '';
   $handler->display->display_options['fields']['field_publication_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_publication_type']['type'] = 'i18n_taxonomy_term_reference_plain';
-  /* Field: Content: File */
+  /* Field: Content: Related resources */
   $handler->display->display_options['fields']['field_file']['id'] = 'field_file';
   $handler->display->display_options['fields']['field_file']['table'] = 'field_data_field_file';
   $handler->display->display_options['fields']['field_file']['field'] = 'field_file';
@@ -229,7 +229,7 @@ function osha_publication_views_default_views() {
   $handler->display->display_options['fields']['field_publication_type']['label'] = '';
   $handler->display->display_options['fields']['field_publication_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_publication_type']['type'] = 'i18n_taxonomy_term_reference_plain';
-  /* Field: Content: File */
+  /* Field: Content: Related resources */
   $handler->display->display_options['fields']['field_file']['id'] = 'field_file';
   $handler->display->display_options['fields']['field_file']['table'] = 'field_data_field_file';
   $handler->display->display_options['fields']['field_file']['field'] = 'field_file';
@@ -403,7 +403,7 @@ function osha_publication_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['language_1']['expose']['reduce'] = TRUE;
-  $handler->display->display_options['path'] = 'publications';
+  $handler->display->display_options['path'] = 'publications-page';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'slidehow');
@@ -498,7 +498,7 @@ function osha_publication_views_default_views() {
   $handler->display->display_options['fields']['title_field']['label'] = '';
   $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title_field']['link_to_entity'] = 1;
-  /* Field: Content: File */
+  /* Field: Content: Related resources */
   $handler->display->display_options['fields']['field_file']['id'] = 'field_file';
   $handler->display->display_options['fields']['field_file']['table'] = 'field_data_field_file';
   $handler->display->display_options['fields']['field_file']['field'] = 'field_file';
