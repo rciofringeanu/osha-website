@@ -19,7 +19,7 @@ if (!empty($json['variables']) && is_array($json['variables'])) {
 global $user;
 $user->uid = 1;
 
-osha_configure_solr();
+//osha_configure_solr();
 
 
 /**
