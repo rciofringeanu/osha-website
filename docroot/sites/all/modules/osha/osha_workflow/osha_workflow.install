@@ -41,3 +41,18 @@ function osha_workflow_install() {
   $form_state['values']['roles'] = array(3 => 3);
   drupal_form_submit('workbench_access_role_form', $form_state);*/
 }
+
+/**
+ * Implements hook_enable().
+ */
+function osha_workflow_enable() {
+  osha_workflow_create_roles();
+}
+
+/**
+ * Implements hook_update_n().
+ */
+function osha_workflow_update_7001() {
+  module_load_include('module', 'osha_workflow');
+  osha_workflow_create_roles();
+}

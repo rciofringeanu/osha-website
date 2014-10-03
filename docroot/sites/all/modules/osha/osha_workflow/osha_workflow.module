@@ -6,8 +6,80 @@
 
 include_once 'osha_workflow.features.inc';
 
-function osha_workflow_node_view($node) {
+/**
+ * This method creates the user roles required by the workflow.
+ */
+function osha_workflow_create_roles() {
+
+  $editor_permissions = array(
+    "access administration pages",
+    "access comments",
+    "access content",
+    "access content overview",
+    "access contextual links",
+    "access dashboard",
+    "access media browser",
+    "access toolbar",
+    "access workbench",
+    "create files",
+    "delete own audio files",
+    "delete own document files",
+    "delete own image files",
+    "delete own video files",
+    "download any audio files",
+    "download any document files",
+    "download any image files",
+    "download any video files",
+    "download own audio files",
+    "download own document files",
+    "download own image files",
+    "download own video files",
+    "edit any audio files",
+    "edit any document files",
+    "edit any image files",
+    "edit any video files",
+    "edit own audio files",
+    "edit own document files",
+    "edit own image files",
+    "edit own video files",
+    "moderate content from draft to final_draft",
+    "moderate content from final_draft to draft",
+    "post comments",
+    "search content",
+    "use advanced search",
+    "use Search Autocomplete",
+    "use text format filtered_html",
+    "use text format full_html",
+    "use workbench_moderation my drafts tab",
+    "use workbench_moderation needs review tab",
+    "view all unpublished content",
+    "view files",
+    "view moderation messages",
+    "view own files",
+    "view own private files",
+    "view own unpublished content",
+    "view private files",
+    "view revisions",
+    "view the administration theme",
+  );
 
 
 
+
+  $roles = array(
+    'Editor' => $editor_permissions,
+    'Review Manager' => array(),
+    'Project Manager' => array(),
+    'Approver' => array(),
+    'Final Approver' => array(),
+    'Content Administrator' => array(),
+  );
+
+  foreach ($roles as $role_name => $permissions) {
+    $role = new stdClass();
+    $role->name = $role_name;
+    user_role_save($role);
+
+    user_role_grant_permissions($role->rid, $permissions);
+  }
 }
